@@ -15,7 +15,15 @@ header:
 prereqs:
   runtime:
     requires:
-      - perl: 5.014000
+      - perl: 5.010000
+      - Moose: 2.1400
+      - namespace::autoclean: 0.18
+      - MooseX::AttributeShortcuts
+      - Types::Standard: 1.000000
+      - Types::URI
+      - JSON::MaybeXS
+      - Path::Tiny
+      - Badge::Depot: 0.0103
 
 plugins:
   - +config: Author::CSSON
