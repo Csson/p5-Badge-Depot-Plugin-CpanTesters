@@ -51,10 +51,12 @@ has custom_image_url => (
     isa => Uri,
     coerce => 1,
     lazy => 1,
-    default => sub {
-        my $self = shift;
-        return sprintf '%s/badge/cpantesters/%s/%s', $self->base_url, $self->dist, $self->version;
-    },
+    builder => 1,
+);
+
+sub _build_custom_image_url  {
+    my $self = shift;
+    return sprintf '%s/badge/cpantesters/%s/%s', $self->base_url, $self->dist, $self->version;
 );
 has _meta => (
     is => 'ro',
@@ -82,7 +84,7 @@ sub _build_meta {
 sub BUILD {
     my $self = shift;
     $self->link_url(sprintf 'http://matrix.cpantesters.org/?dist=%s %s', $self->dist, $self->version eq 'latest' ? '' : $self->version);
-    $self->image_url(sprintf $self->custom_image_url, $self->dist, $self->version);
+    $self->image_url($self->custom_image_url);
     $self->image_alt('CPAN Testers result');
 }
 
