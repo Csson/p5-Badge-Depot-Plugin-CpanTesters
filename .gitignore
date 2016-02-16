@@ -1,0 +1,7 @@
+/Badge-Depot-Plugin-CpanTesters-*
+/.build
+/_build*
+/Build
+MYMETA.*
+!META.json
+/.prove
