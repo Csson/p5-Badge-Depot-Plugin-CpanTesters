@@ -2,7 +2,7 @@ use 5.10.0;
 use strict;
 use warnings;
 
-package Badge::Depot::Plugin::CpanTesters;
+package Badge::Depot::Plugin::Cpantesters;
 
 # ABSTRACT: CPAN testers plugin for Badge::Depot
 # AUTHORITY
@@ -100,10 +100,37 @@ __END__
 
     use Badge::Depot::Plugin::CpanTesters;
 
+    my $badge = Badge::Depot::Plugin::CpanTesters->new(dist => 'The-Dist', version => '0.1002');
+
+    print $badge->to_html;
+    # prints: 
+    <a href="http://matrix.cpantesters.org/?dist=The-Dist%200.1002">
+        <img src="https://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
+    </a>
+
 =head1 DESCRIPTION
 
-Badge::Depot::Plugin::CpanTesters is ...
+Create a L<CpanTesters|http://cpantesters.org> badge for a distribution.
+
+This class consumes the L<Badge::Depot> role.
+
+=head1 ATTRIBUTES
+
+If there is a C<META.json> in the distribution root, then no attributes are necessary - this plugin uses the distribution name and version given in it.
+
+=for :list
+
+=head2 dist
+
+Distribution name. With dashes, not colons.
+
+=head2 version
+
+Distribution version.
 
 =head1 SEE ALSO
+
+=for :list
+* L<Badge::Depot>
 
 =cut
