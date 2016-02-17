@@ -29,9 +29,9 @@ plugins:
   - +config: Author::CSSON
 
   - +extend_plugin: TravisYML
-    perl_version: 5.10 5.12 5.14 5.16 5.18 5.20 5.22 dev
+    perl_version: 5.10 5.12 5.14 5.16 5.18 5.20 5.22
     before_install:
-     - eval $(curl https://travis-perl.github.io/init) --auto
+     - ~
 
 
 ---

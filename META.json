@@ -101,7 +101,7 @@
          },
          "suggests" : {
             "Dist::Iller" : "0.1406",
-            "Dist::Iller::Config::Author::CSSON" : "0.0306"
+            "Dist::Iller::Config::Author::CSSON" : "0.0307"
          }
       },
       "runtime" : {

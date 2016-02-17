@@ -1,4 +1,4 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-17 13:11:01 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-17 13:42:17 UTC.
 
 on runtime => sub {
     requires 'Badge::Depot' => '0.0103';
@@ -95,5 +95,5 @@ on develop => sub {
 };
 on develop => sub {
     suggests 'Dist::Iller' => '0.1406';
-    suggests 'Dist::Iller::Config::Author::CSSON' => '0.0306';
+    suggests 'Dist::Iller::Config::Author::CSSON' => '0.0307';
 };
