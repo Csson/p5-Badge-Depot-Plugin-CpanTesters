@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "Badge-Depot-Plugin-CpanTesters",
+   "name" : "Badge-Depot-Plugin-Cpantesters",
    "no_index" : {
       "directory" : [
          "eg",
@@ -31,8 +31,6 @@
       },
       "develop" : {
          "requires" : {
-            "Dist::Iller" : "0.1405",
-            "Dist::Iller::Config::Author::CSSON" : "0.0306",
             "Dist::Zilla::Plugin::Authority" : "1.009",
             "Dist::Zilla::Plugin::BumpVersionAfterRelease::Transitional" : "0",
             "Dist::Zilla::Plugin::ChangeStats::Dependencies::Git" : "0",
@@ -86,7 +84,6 @@
             "Pod::Weaver::Plugin::Transformer" : "0",
             "Pod::Weaver::PluginBundle::CorePrep" : "0",
             "Pod::Weaver::Section::Authors" : "0",
-            "Pod::Weaver::Section::Badges" : "0",
             "Pod::Weaver::Section::Collect" : "0",
             "Pod::Weaver::Section::Generic" : "0",
             "Pod::Weaver::Section::Homepage::DefaultCPAN" : "0",
@@ -101,6 +98,10 @@
             "Test::NoTabs" : "0",
             "Test::Pod" : "1.41",
             "Test::Warnings" : "0"
+         },
+         "suggests" : {
+            "Dist::Iller" : "0.1406",
+            "Dist::Iller::Config::Author::CSSON" : "0.0306"
          }
       },
       "runtime" : {
@@ -130,8 +131,8 @@
       }
    },
    "provides" : {
-      "Badge::Depot::Plugin::CpanTesters" : {
-         "file" : "lib/Badge/Depot/Plugin/CpanTesters.pm",
+      "Badge::Depot::Plugin::Cpantesters" : {
+         "file" : "lib/Badge/Depot/Plugin/Cpantesters.pm",
          "version" : "0.0100"
       }
    },
@@ -140,7 +141,7 @@
       "bugtracker" : {
          "web" : "https://github.com/Csson/p5-Badge-Depot-Plugin-CpanTesters/issues"
       },
-      "homepage" : "https://metacpan.org/release/Badge-Depot-Plugin-CpanTesters",
+      "homepage" : "https://metacpan.org/release/Badge-Depot-Plugin-Cpantesters",
       "repository" : {
          "type" : "git",
          "url" : "https://github.com/Csson/p5-Badge-Depot-Plugin-CpanTesters.git",

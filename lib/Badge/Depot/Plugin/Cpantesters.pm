@@ -98,19 +98,27 @@ __END__
 
 =head1 SYNOPSIS
 
-    use Badge::Depot::Plugin::CpanTesters;
+If used standalone:
 
-    my $badge = Badge::Depot::Plugin::CpanTesters->new(dist => 'The-Dist', version => '0.1002');
+    use Badge::Depot::Plugin::Cpantesters;
+
+    my $badge = Badge::Depot::Plugin::Cpantesters->new(dist => 'The-Dist', version => '0.1002');
 
     print $badge->to_html;
-    # prints: 
+    # prints:
     <a href="http://matrix.cpantesters.org/?dist=The-Dist%200.1002">
         <img src="https://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
     </a>
 
+If used with L<Pod::Weaver::Section::Badges>, in weaver.ini:
+
+    [Badges]
+    ; other settings
+    badge = cpantesters
+
 =head1 DESCRIPTION
 
-Create a L<CpanTesters|http://cpantesters.org> badge for a distribution.
+Creates a L<CpanTesters|http://cpantesters.org> badge for a distribution.
 
 This class consumes the L<Badge::Depot> role.
 
@@ -128,9 +136,16 @@ Distribution name. With dashes, not colons.
 
 Distribution version.
 
+=head2 base_url
+
+Default: C<https://badgedepot.code301.com>
+
+Set this if you wish to use another instance of L<Badge::Depot::App>.
+
 =head1 SEE ALSO
 
 =for :list
 * L<Badge::Depot>
+* L<Task::Badge::Depot>
 
 =cut

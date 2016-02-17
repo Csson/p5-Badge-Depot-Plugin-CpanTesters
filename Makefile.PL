@@ -12,10 +12,10 @@ my %WriteMakefileArgs = (
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
-  "DISTNAME" => "Badge-Depot-Plugin-CpanTesters",
+  "DISTNAME" => "Badge-Depot-Plugin-Cpantesters",
   "LICENSE" => "perl",
   "MIN_PERL_VERSION" => "5.010000",
-  "NAME" => "Badge::Depot::Plugin::CpanTesters",
+  "NAME" => "Badge::Depot::Plugin::Cpantesters",
   "PREREQ_PM" => {
     "Badge::Depot" => "0.0103",
     "JSON::MaybeXS" => 0,

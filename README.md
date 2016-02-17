@@ -1,22 +1,59 @@
 # NAME
 
-Badge::Depot::Plugin::CpanTesters - CPAN testers plugin for Badge::Depot
-
-![Requires Perl 5.10+](https://img.shields.io/badge/perl-5.10+-brightgreen.svg) [![Travis status](https://api.travis-ci.org/Csson/p5-Badge-Depot-Plugin-CpanTesters.svg?branch=master)](https://travis-ci.org/Csson/p5-Badge-Depot-Plugin-CpanTesters) ![coverage 73.8%](https://img.shields.io/badge/coverage-73.8%-red.svg)
+Badge::Depot::Plugin::Cpantesters - CPAN testers plugin for Badge::Depot
 
 # VERSION
 
-Version 0.0100, released 2016-02-16.
+Version 0.0100, released 2016-02-17.
 
 # SYNOPSIS
 
-    use Badge::Depot::Plugin::CpanTesters;
+If used standalone:
+
+    use Badge::Depot::Plugin::Cpantesters;
+
+    my $badge = Badge::Depot::Plugin::Cpantesters->new(dist => 'The-Dist', version => '0.1002');
+
+    print $badge->to_html;
+    # prints:
+    <a href="http://matrix.cpantesters.org/?dist=The-Dist%200.1002">
+        <img src="https://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
+    </a>
+
+If used with [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::Weaver::Section::Badges), in weaver.ini:
+
+    [Badges]
+    ; other settings
+    badge = cpantesters
 
 # DESCRIPTION
 
-Badge::Depot::Plugin::CpanTesters is ...
+Creates a [CpanTesters](http://cpantesters.org) badge for a distribution.
+
+This class consumes the [Badge::Depot](https://metacpan.org/pod/Badge::Depot) role.
+
+# ATTRIBUTES
+
+If there is a `META.json` in the distribution root, then no attributes are necessary - this plugin uses the distribution name and version given in it.
+
+## dist
+
+Distribution name. With dashes, not colons.
+
+## version
+
+Distribution version.
+
+## base\_url
+
+Default: `https://badgedepot.code301.com`
+
+Set this if you wish to use another instance of [Badge::Depot::App](https://metacpan.org/pod/Badge::Depot::App).
 
 # SEE ALSO
+
+- [Badge::Depot](https://metacpan.org/pod/Badge::Depot)
+- [Task::Badge::Depot](https://metacpan.org/pod/Task::Badge::Depot)
 
 # SOURCE
 
@@ -24,7 +61,7 @@ Badge::Depot::Plugin::CpanTesters is ...
 
 # HOMEPAGE
 
-[https://metacpan.org/release/Badge-Depot-Plugin-CpanTesters](https://metacpan.org/release/Badge-Depot-Plugin-CpanTesters)
+[https://metacpan.org/release/Badge-Depot-Plugin-Cpantesters](https://metacpan.org/release/Badge-Depot-Plugin-Cpantesters)
 
 # AUTHOR
 
