@@ -57,7 +57,7 @@ has custom_image_url => (
 sub _build_custom_image_url  {
     my $self = shift;
     return sprintf '%s/badge/cpantesters/%s/%s', $self->base_url, $self->dist, $self->version;
-);
+}
 has _meta => (
     is => 'ro',
     isa => HashRef,
