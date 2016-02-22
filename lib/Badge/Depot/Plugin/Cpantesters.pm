@@ -23,8 +23,8 @@ has dist => (
     lazy => 1,
     default => sub {
         my $self = shift;
-        if($self->has_meta) {
-            return $self->_meta->{'dist'} if exists $self->_meta->{'dist'};
+        if($self->get_meta('dist')) {
+            return $self->_meta->{'dist'};
         }
     },
 );
@@ -34,8 +34,8 @@ has version => (
     lazy => 1,
     default => sub {
         my $self = shift;
-        if($self->has_meta) {
-            return $self->_meta->{'version'} if exists $self->_meta->{'version'};
+        if($self->get_meta('version')) {
+            return $self->_meta->{'version'};
         }
     },
 );
@@ -61,12 +61,24 @@ sub _build_custom_image_url  {
 has _meta => (
     is => 'ro',
     isa => HashRef,
+    traits => ['Hash'],
+    lazy => 1,
     predicate => 'has_meta',
     builder => '_build_meta',
+    handles => {
+        get_meta => 'get',
+    },
 );
 
 sub _build_meta {
     my $self = shift;
+
+    if($self->has_zilla) {
+        return {
+            dist => $self->zilla->name,
+            version => $self->zilla->version,
+        };
+    }
 
     return {} if !path('META.json')->exists;
 
@@ -124,7 +136,13 @@ This class consumes the L<Badge::Depot> role.
 
 =head1 ATTRIBUTES
 
-If there is a C<META.json> in the distribution root, then no attributes are necessary - this plugin uses the distribution name and version given in it.
+This badge tries to use distribution meta data to set the attributes. If that is available no attributes need to be set manually. The following checks are made:
+
+=for :list
+1. If the badge is used via L<Pod::Weaver::Section::Badges> during a L<Dist::Zilla> build, then C<version> and C<dist> are set to the values in the Dist::Zilla object.
+2. If there is a C<META.json> in the distribution root then that is used to set C<version> and C<dist>.
+
+If neither of those are true then C<dist> and C<version> should passed to the constructor.
 
 =for :list
 
