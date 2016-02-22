@@ -8,6 +8,7 @@ Revision history for Badge-Depot-Plugin-Cpantesters
  [Documentation]
 
  [Enhancements]
+  - Now uses the Dist::Zilla object (if it is used during a Dist::Zilla build) to set the 'dist' and 'version' attributes.
 
  [New Features]
 

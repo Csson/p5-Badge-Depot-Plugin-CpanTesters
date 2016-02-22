@@ -23,7 +23,7 @@ prereqs:
       - Types::URI
       - JSON::MaybeXS
       - Path::Tiny
-      - Badge::Depot: 0.0103
+      - Badge::Depot: 0.0104
 
 plugins:
   - +config: Author::CSSON
@@ -34,7 +34,11 @@ doctype: weaver
 plugins:
   - +config: Author::CSSON
 
-  - +remove_plugin: Badges
-
 ---
 doctype: cpanfile
+
+---
+doctype: gitignore
+config: Author::CSSON
+always:
+ - /Badge-Depot-Plugin-Cpantesters-*
