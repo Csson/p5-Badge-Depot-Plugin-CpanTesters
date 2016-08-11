@@ -12,6 +12,7 @@ Revision history for Badge-Depot-Plugin-Cpantesters
  [New Features]
 
  [Other Changes]
+ - Default url protocol (temporarily) changed from https to http.
 
  [Requirements]
 

@@ -6,15 +6,15 @@ Badge::Depot::Plugin::Cpantesters - CPAN testers plugin for Badge::Depot
     <p>
     <img src="https://img.shields.io/badge/perl-5.10+-blue.svg" alt="Requires Perl 5.10+" />
     <a href="https://travis-ci.org/Csson/p5-Badge-Depot-Plugin-CpanTesters"><img src="https://api.travis-ci.org/Csson/p5-Badge-Depot-Plugin-CpanTesters.svg?branch=master" alt="Travis status" /></a>
-    <a href="http://cpants.cpanauthors.org/dist/Badge-Depot-Plugin-Cpantesters-0.0101"><img src="https://badgedepot.code301.com/badge/kwalitee/Badge-Depot-Plugin-Cpantesters/0.0101" alt="Distribution kwalitee" /></a>
-    <a href="http://matrix.cpantesters.org/?dist=Badge-Depot-Plugin-Cpantesters%200.0101"><img src="https://badgedepot.code301.com/badge/cpantesters/Badge-Depot-Plugin-Cpantesters/0.0101" alt="CPAN Testers result" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Badge-Depot-Plugin-Cpantesters-0.0102"><img src="http://badgedepot.code301.com/badge/kwalitee/CSSON/Badge-Depot-Plugin-Cpantesters/0.0102" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Badge-Depot-Plugin-Cpantesters%200.0102"><img src="http://badgedepot.code301.com/badge/cpantesters/Badge-Depot-Plugin-Cpantesters/0.0102" alt="CPAN Testers result" /></a>
     <img src="https://img.shields.io/badge/coverage-70.6%-red.svg" alt="coverage 70.6%" />
     </p>
 </div>
 
 # VERSION
 
-Version 0.0101, released 2016-02-22.
+Version 0.0102, released 2016-08-11.
 
 # SYNOPSIS
 
@@ -27,7 +27,7 @@ If used standalone:
     print $badge->to_html;
     # prints:
     <a href="http://matrix.cpantesters.org/?dist=The-Dist%200.1002">
-        <img src="https://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
+        <img src="http://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
     </a>
 
 If used with [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::Weaver::Section::Badges), in weaver.ini:

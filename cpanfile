@@ -1,4 +1,4 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-22 14:45:04 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-08-11 22:47:00 UTC.
 
 on runtime => sub {
     requires 'Badge::Depot' => '0.0104';
@@ -55,6 +55,7 @@ on develop => sub {
     requires 'Dist::Zilla::Plugin::MakeMaker' => '0';
     requires 'Dist::Zilla::Plugin::Manifest' => '0';
     requires 'Dist::Zilla::Plugin::ManifestSkip' => '0';
+    requires 'Dist::Zilla::Plugin::MetaConfig' => '0';
     requires 'Dist::Zilla::Plugin::MetaJSON' => '0';
     requires 'Dist::Zilla::Plugin::MetaNoIndex' => '0';
     requires 'Dist::Zilla::Plugin::MetaProvides::Package' => '2.003001';
@@ -63,6 +64,7 @@ on develop => sub {
     requires 'Dist::Zilla::Plugin::PodSyntaxTests' => '0';
     requires 'Dist::Zilla::Plugin::PodWeaver' => '4.006';
     requires 'Dist::Zilla::Plugin::Prereqs' => '0';
+    requires 'Dist::Zilla::Plugin::PromptIfStale' => '0';
     requires 'Dist::Zilla::Plugin::Readme' => '0';
     requires 'Dist::Zilla::Plugin::ReadmeAnyFromPod' => '0.150250';
     requires 'Dist::Zilla::Plugin::RewriteVersion::Transitional' => '0.007';
@@ -101,6 +103,6 @@ on develop => sub {
     requires 'Test::Warnings' => '0.026';
 };
 on develop => sub {
-    suggests 'Dist::Iller' => '0.1407';
-    suggests 'Dist::Iller::Config::Author::CSSON' => '0.0309';
+    suggests 'Dist::Iller' => '0.1408';
+    suggests 'Dist::Iller::Config::Author::CSSON' => '0.0311';
 };
