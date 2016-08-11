@@ -44,7 +44,7 @@ has base_url => (
     isa => Uri,
     coerce => 1,
     lazy => 1,
-    default => 'https://badgedepot.code301.com',
+    default => 'http://badgedepot.code301.com',
 );
 has custom_image_url => (
     is => 'ro',
