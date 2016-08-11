@@ -119,7 +119,7 @@ If used standalone:
     print $badge->to_html;
     # prints:
     <a href="http://matrix.cpantesters.org/?dist=The-Dist%200.1002">
-        <img src="https://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
+        <img src="http://badgedepot.code301.com/badge/cpantesters/The-Dist/0.1002" alt="CPAN Testers result" />
     </a>
 
 If used with L<Pod::Weaver::Section::Badges>, in weaver.ini:
