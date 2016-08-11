@@ -6,7 +6,7 @@ package Badge::Depot::Plugin::Cpantesters;
 
 # ABSTRACT: CPAN testers plugin for Badge::Depot
 # AUTHORITY
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 
 use Moose;
 use namespace::autoclean;
